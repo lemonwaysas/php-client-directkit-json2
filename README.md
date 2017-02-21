@@ -35,6 +35,14 @@ See also: [LemonWay API documentation](http://documentation.lemonway.fr/) / meth
 * The code only use PHP basic to stay framework-neutral. It only show you how easy to access to our service. In real project you should change it a litte, for example: wrap the `callService` in a service class in your Laravel project, or make a Symfony component for yourself.
 * A good practices is to log any request / response (with Monolog for example) to our service in Development mode.
 
+# How to run
+
+After downloading this project (`git clone`):
+```
+php GetWalletDetails.php 
+```
+Out of the box it will call the `demo` environment. If you have your own test environment. You should fix the configuration on `LemonWay.php`, put your own environement configuration.
+
 # Time to play!
 
 The example is only the basic, you can play with our API by calling other services. For example:
