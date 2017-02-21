@@ -2,7 +2,7 @@
 require_once "./LemonWay.php";
 
 try {
-    $buffer = base64_encode(file_get_contents('images/test.jpeg', true));
+    $buffer = base64_encode(file_get_contents('images/test.jpg', true));
 	$response = callService("UploadFile", array(
 	            "wallet" => "8888",
                 "fileName" => "test.jpg",
