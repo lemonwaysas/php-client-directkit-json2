@@ -6,7 +6,7 @@ It is the simplest and the most network-efficient way.
  
 If you don't like the json format, you can also send SOAP (XML) requests to Directkit**Xml**, you can do it in 3 different ways:
 
- 1. **[SoapClient]**: the casual method in PHP to consume any Web Service. It is the simplest way to access to SOAP request.
+ 1. **[SoapClient]**: the casual method in PHP to consume any Web Service. It is the simplest way to access to the SOAP service.
  2. **[SoapClient SDK]**: same with the first method, but all the structure of requests / responses are generated overhead with [`wsdl2phpgenerator`](http://wsdl2phpgenerator.github.io/wsdl2phpgenerator/)
  3. **[LemonWay SDK]**: call the web service as a normal http request [`curl_init`]. The SDK will help you to parse the SOAP response.
 
@@ -32,7 +32,7 @@ See also: [LemonWay API documentation](http://documentation.lemonway.fr/) / meth
 
 # Note
 
-* The code only use PHP basic to stay framework-neutral. It only show you how easy to access to our service. In real project you should change it a litte, for example: wrap the `callService` in a service class in your Laravel project, or make a Symphony component for yourself.
+* The code only use PHP basic to stay framework-neutral. It only show you how easy to access to our service. In real project you should change it a litte, for example: wrap the `callService` in a service class in your Laravel project, or make a Symfony component for yourself.
 * A good practices is to log any request / response (with Monolog for example) to our service in Development mode.
 
 # Time to play!
