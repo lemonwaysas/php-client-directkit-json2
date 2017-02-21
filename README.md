@@ -47,7 +47,7 @@ The example is only the basic, you can play with our API by calling other servic
 - [Create a payment form to credit a wallet](http://documentation.lemonway.fr/api-en/directkit/money-in-credit-a-wallet/payment-form)
 
 
-[`curl_init`] http://php.net/manual/en/function.curl-init.php
+[`curl_init`]: http://php.net/manual/en/function.curl-init.php
 [`SoapClient`]: http://php.net/manual/en/class.soapclient.php
 [SoapClient]: https://github.com/lemonwaysas/php-client-directkit-xml-soap
 [SoapClient SDK]: https://github.com/lemonwaysas/php-client-directkit-xml-soap-sdk
