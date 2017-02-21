@@ -3,7 +3,7 @@
 * Put the Directkit JSON2 here (your should see "json2" in your URL)
 * Make sure your server is whitelisted, otherwise you will receive 403-forbidden
 */
-define('DIRECTKIT_JSON2', 'https://sandbox-api.lemonway.fr/mb/hiep/dev/directkitjson2/Service.asmx');
+define('DIRECTKIT_JSON2', 'https://sandbox-api.lemonway.fr/mb/demo/dev/directkitjson2/Service.asmx');
 define('LOGIN', 'society');
 define('PASSWORD', '123456');
 define('VERSION', '1.8');
