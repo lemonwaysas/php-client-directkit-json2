@@ -1,16 +1,10 @@
 The LemonWay API (called Directkit) has two implementations: Directkit**Json2** and Directkit**Xml**. 
-There are different ways to call the service depends on the implementation you chose.
 
-The best way to access to directkit**Json2** is to use the [`curl_init`] function to send POST request to the Directkit**Json2** service. 
-It is the simplest and the most network-efficient way. 
- 
-If you don't like the json format, you can also send SOAP (XML) requests to Directkit**Xml**, you can do it in 3 different ways:
+The Directkit**Json2** is recommended over the Directkit**Xml** because It is the simplest and the most network-efficient way.
 
- 1. **[SoapClient]**: the casual method in PHP to consume any Web Service. It is the simplest way to access to the SOAP service.
- 2. **[SoapClient SDK]**: same with the first method, but all the structure of requests / responses are generated overhead with [`wsdl2phpgenerator`](http://wsdl2phpgenerator.github.io/wsdl2phpgenerator/)
- 3. **[LemonWay SDK]**: call the web service as a normal http request [`curl_init`]. The SDK will help you to parse the SOAP response.
+To call the directkit**Json2** in PHP: use the [`curl_init`] to send a POST request. 
 
-This example demonstrates the recommended method: use the [`curl_init`] to call the Directkit**Json2** and get the response.
+This tutorial show how simple it is.
 
 # Sample codes
 
@@ -30,18 +24,18 @@ catch (Exception $e)
 ```
 See also: [LemonWay API documentation](http://documentation.lemonway.fr/) / method [`GetWalletDetails`](http://documentation.lemonway.fr/api-en/directkit/manage-wallets/getwalletdetails-getting-detailed-wallet-data)
 
-# Note
-
-* The code only use PHP basic to stay framework-neutral. It only show you how easy to access to our service. In real project you should change it a litte, for example: wrap the `callService` in a service class in your Laravel project, or make a Symfony component for yourself.
-* A good practices is to log any request / response (with Monolog for example) to our service in Development mode.
-
 # How to run
 
-After downloading this project (`git clone`):
+After downloading this project (`git clone`), run:
 ```
 php GetWalletDetails.php 
 ```
-Out of the box it will call the `demo` environment. If you have your own test environment. You should fix the configuration on `LemonWay.php`, put your own environement configuration.
+Out of the box it will call the `demo` environment. If you have your own test environment. You should fix the configuration in `LemonWay.php`, put your own environment configuration.
+
+# Note
+
+* The code only use PHP basic to stay framework-neutral. It only show you how easy to access to our service. In real project you might change it a litte, for example: wrap the `callService` in a service class in your Laravel project, or make a Symfony component for yourself.
+* A good practices is to log any request / response (with Monolog for example) to our service in Development mode.
 
 # Time to play!
 
