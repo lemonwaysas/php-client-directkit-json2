@@ -62,7 +62,7 @@ echo json_encode($response, JSON_PRETTY_PRINT);
 
 You will get a Business Error if the wallet `sc` is 0. In order to make this example working, you will have to
 
-1. Credit the wallet `sc` first, you will have to do it by login to your BackOffice or contacting the LemonWay Staff (on production)
+1. Credit the wallet `sc` first, you are able to do it in your BackOffice (on test environment) or by contacting the LemonWay Staff (on production)
 2. Read the documentation on [`MoneyInWebInit`] to get an idea how it works. Basicly, it will return a token that you will have to combine with the Webkit to get to the payment page.
 3. Once you got to the payment page (via the Webkit) you can use one of the [test cards](http://documentation.lemonway.fr/api-en/introduction/test-environment-and-default-accounts) to finish the payment process.
 
