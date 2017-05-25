@@ -6,10 +6,18 @@
 define('DIRECTKIT_JSON2', 'https://sandbox-api.lemonway.fr/mb/demo/dev/directkitjson2/Service.asmx');
 define('LOGIN', 'society');
 define('PASSWORD', '123456');
-define('VERSION', '1.8');
+define('VERSION', '4.0');
 define('LANGUAGE', 'en');
-define('SSL_VERIFICATION', false);
 define('UA', isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : 'ua');
+
+/**
+ * Only activate it if your PHP server knows how to verify the certifcates.
+ * (You will have to configure the  the CURLOPT_CAINFO option or the CURLOPT_CAPATH option)
+ * https://curl.haxx.se/libcurl/c/CURLOPT_SSL_VERIFYPEER.html
+ * https://stackoverflow.com/a/18972719/347051
+ */
+define('SSL_VERIFICATION', false);
+
 
 /*
 IP of end-user
