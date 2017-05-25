@@ -23,9 +23,9 @@ require_once "./LemonWay.php";
 
 try {
 	$response = callService("GetWalletDetails", array(
-	            "wallet" => "sc"
-	        ));
-    //print the response
+					"wallet" => "sc"
+				));
+	//print the response
 	echo json_encode($response, JSON_PRETTY_PRINT);
 }
 catch (Exception $e) 
@@ -34,28 +34,28 @@ catch (Exception $e)
 }
 ```
 
-Following the example, let try to create a new wallet `project001` with [`RegisterWallet`]
+Following the example, let try to create a new wallet `project001` with the [`RegisterWallet`] function
 ```php
 require_once "./LemonWay.php";
 $response = callService("RegisterWallet", array(
-	            "wallet" => "project001",
-                "clientMail" => "peter.pan@email.com",
-                "clientFirstName" => "Peter",
-                "clientLastName" => "PAN",
-                "clientTitle" => "M"
-	        ));
+				"wallet" => "project001",
+				"clientMail" => "peter.pan@email.com",
+				"clientFirstName" => "Peter",
+				"clientLastName" => "PAN",
+				"clientTitle" => "M"
+			));
 //print the response
 echo json_encode($response, JSON_PRETTY_PRINT);
 ```
 
-Now try to credit the wallet `project001` with a [test credit card](http://documentation.lemonway.fr/api-en/introduction/test-environment-and-default-accounts):
+Now try to credit the wallet `project001` with the [`MoneyInWebInit`] function:
 
 ```php
 require_once "./LemonWay.php";
 $response = callService("MoneyInWebInit", array(
-	            "wallet" => "project001",
-                "amountTot" => "10.50"
-	        ));
+				"wallet" => "project001",
+				"amountTot" => "10.50"
+			));
 //print the response
 echo json_encode($response, JSON_PRETTY_PRINT);
 ```
@@ -63,10 +63,10 @@ echo json_encode($response, JSON_PRETTY_PRINT);
 You will get a Business Error if the wallet `sc` is 0. In order to make this example working, you will have to
 
 1. Credit the wallet `sc` first, you will have to do it by login to your BackOffice or contacting the LemonWay Staff (on production)
-2. Read the documentation on [`MoneyInWebInit`] to get an idea how it work. Basicly it will return a token that you will have to combine with the Webkit.
-3. Once you got to the payment page (via the Webkit) you can use one of the [test card]((http://documentation.lemonway.fr/api-en/introduction/test-environment-and-default-accounts)) to finish the payment process 
+2. Read the documentation on [`MoneyInWebInit`] to get an idea how it works. Basicly, it will return a token that you will have to combine with the Webkit to get to the payment page.
+3. Once you got to the payment page (via the Webkit) you can use one of the [test cards](http://documentation.lemonway.fr/api-en/introduction/test-environment-and-default-accounts) to finish the payment process.
 
-# Other functions
+# See also
 
 You can also try other functions to understand our API:
 
