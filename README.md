@@ -6,24 +6,6 @@ To call the directkit**Json2** in PHP: use the [`curl_init`] to send a POST requ
 
 This tutorial show how simple it is.
 
-# Sample codes
-
-```php
-require_once "./LemonWay.php";
-
-try {
-	$response = callService("GetWalletDetails", array(
-	            "wallet" => "sc"
-	        ));
-	echo json_encode($response, JSON_PRETTY_PRINT);
-}
-catch (Exception $e) 
-{
-	echo ($e);
-}
-```
-See also: [LemonWay API documentation](http://documentation.lemonway.fr/) / method [`GetWalletDetails`](http://documentation.lemonway.fr/api-en/directkit/manage-wallets/getwalletdetails-getting-detailed-wallet-data)
-
 # How to run
 
 After downloading this project (`git clone`), run:
@@ -34,7 +16,60 @@ Out of the box it will call the `demo` environment. If you have your own test en
 
 # Time to play!
 
-The example is only the basic, you can also play with our API by calling other services. For example:
+In the `GetWalletDetails.php` you succefully called the [`GetWalletDetails`] function to get details information of the wallet `sc`:
+
+```php
+require_once "./LemonWay.php";
+
+try {
+	$response = callService("GetWalletDetails", array(
+	            "wallet" => "sc"
+	        ));
+    //print the response
+	echo json_encode($response, JSON_PRETTY_PRINT);
+}
+catch (Exception $e) 
+{
+	echo ($e);
+}
+```
+
+Following the example, let try to create a new wallet `project001` with [`RegisterWallet`]
+```php
+require_once "./LemonWay.php";
+$response = callService("RegisterWallet", array(
+	            "wallet" => "project001",
+                "clientMail" => "peter.pan@email.com",
+                "clientFirstName" => "Peter",
+                "clientLastName" => "PAN",
+                "clientTitle" => "M"
+	        ));
+//print the response
+echo json_encode($response, JSON_PRETTY_PRINT);
+```
+
+Now try to credit the wallet `project001` with a [test credit card](http://documentation.lemonway.fr/api-en/introduction/test-environment-and-default-accounts):
+
+```php
+require_once "./LemonWay.php";
+$response = callService("MoneyInWebInit", array(
+	            "wallet" => "project001",
+                "amountTot" => "10.50"
+	        ));
+//print the response
+echo json_encode($response, JSON_PRETTY_PRINT);
+```
+
+You will get a Business Error if the wallet `sc` is 0. In order to make this example working, you will have to
+
+1. Credit the wallet `sc` first, you will have to do it by login to your BackOffice or contacting the LemonWay Staff (on production)
+2. Read the documentation on [`MoneyInWebInit`] to get an idea how it work. Basicly it will return a token that you will have to combine with the Webkit.
+3. Once you got to the payment page (via the Webkit) you can use one of the [test card]((http://documentation.lemonway.fr/api-en/introduction/test-environment-and-default-accounts)) to finish the payment process 
+
+# Other functions
+
+You can also try other functions to understand our API:
+
 - [Create a new wallet](http://documentation.lemonway.fr/api-en/directkit/manage-wallets/registerwallet-creating-a-new-wallet)
 - [Create a payment link to credit a wallet](http://documentation.lemonway.fr/api-en/directkit/money-in-credit-a-wallet/by-card/moneyinwebinit-indirect-mode-money-in-by-card-crediting-a-wallet)
 - [Create a payment form to credit a wallet](http://documentation.lemonway.fr/api-en/directkit/money-in-credit-a-wallet/payment-form)
@@ -54,3 +89,7 @@ The example is only the basic, you can also play with our API by calling other s
 [SoapClient]: https://github.com/lemonwaysas/php-client-directkit-xml-soap
 [SoapClient SDK]: https://github.com/lemonwaysas/php-client-directkit-xml-soap-sdk
 [LemonWay SDK]: https://github.com/lemonwaysas/php-client-directkit-xml
+[LemonWay API documentation]: http://documentation.lemonway.fr/
+[`MoneyInWebInit`]: http://documentation.lemonway.fr/api-en/directkit/money-in-credit-a-wallet/by-card/moneyinwebinit-indirect-mode-money-in-by-card-crediting-a-wallet
+[`GetWalletDetails`]: http://documentation.lemonway.fr/api-en/directkit/manage-wallets/getwalletdetails-getting-detailed-wallet-data
+[`RegisterWallet`]: http://documentation.lemonway.fr/api-en/directkit/manage-wallets/registerwallet-creating-a-new-wallet
