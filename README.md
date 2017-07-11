@@ -48,7 +48,7 @@ $response = callService("RegisterWallet", array(
 echo json_encode($response, JSON_PRETTY_PRINT);
 ```
 
-Now try to credit the wallet `project001` with the [`MoneyInWebInit`] function:
+Now try to credit the wallet `project001` with a [test card] using the [`MoneyInWebInit`] function:
 
 ```php
 require_once "./LemonWay.php";
@@ -79,7 +79,7 @@ Your commercial support will explain more in detail about the commission system.
 
 2. Read the documentation on [`MoneyInWebInit`] to get an idea how it works. Basicly, it will return a token that you will have to combine with the Webkit to get to the payment page.
 
-3. Once you got to the payment page (via the Webkit) you can use one of the [test cards](http://documentation.lemonway.fr/api-en/introduction/test-environment-and-default-accounts) to finish the payment process.
+3. Once you got to the payment page (via the Webkit) you can use one of the [test card]s to finish the payment process.
 
 # See also
 
@@ -108,3 +108,4 @@ You can also try other functions to understand our API:
 [`MoneyInWebInit`]: http://documentation.lemonway.fr/api-en/directkit/money-in-credit-a-wallet/by-card/moneyinwebinit-indirect-mode-money-in-by-card-crediting-a-wallet
 [`GetWalletDetails`]: http://documentation.lemonway.fr/api-en/directkit/manage-wallets/getwalletdetails-getting-detailed-wallet-data
 [`RegisterWallet`]: http://documentation.lemonway.fr/api-en/directkit/manage-wallets/registerwallet-creating-a-new-wallet
+[test card]: http://documentation.lemonway.fr/api-en/introduction/test-environment-and-default-accounts
