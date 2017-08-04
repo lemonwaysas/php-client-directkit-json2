@@ -10,13 +10,13 @@ This tutorial show how simple it is.
 
 After downloading this project (`git clone`), run:
 ```
-php GetWalletDetails.php 
+php GetWalletDetailsExample.php
 ```
 Out of the box it will call the `demo` environment. If you have your own test environment. You should fix the configuration in `LemonWay.php`, put your own environment configuration.
 
 # Time to play!
 
-In the `GetWalletDetails.php` you succefully called the [`GetWalletDetails`] function to get details information of the wallet `sc`:
+In the `GetWalletDetailsExample.php` you succefully called the [`GetWalletDetails`] function to get details information of the wallet `sc`:
 
 ```php
 require_once "./LemonWay.php";
