@@ -14,6 +14,8 @@ php GetWalletDetailsExample.php
 ```
 Out of the box it will call the `demo` environment. If you have your own test environment. You should fix the configuration in `LemonWay.php`, put your own environment configuration.
 
+Tips: [the Quickest way to get PHP running on a Windows PC](https://github.com/lemonwaysas/php-client-directkit-xml-soap/wiki/Quickest-way-to-get-PHP-running-on-a-Windows-PC)
+
 # Time to play!
 
 In the `GetWalletDetailsExample.php` you succefully called the [`GetWalletDetails`] function to get details information of the wallet `sc`:
