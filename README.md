@@ -2,7 +2,7 @@ The LemonWay API (called Directkit) has two implementations: Directkit**Json2** 
 
 The Directkit**Json2** is recommended over the Directkit**Xml** because It is the simplest and the most network-efficient way.
 
-To call the directkit**Json2** in PHP: use the [`curl_init`] to send a POST request (See also the [Postman example](http://documentation.lemonway.fr/api-en/files/4194929/image2017-1-30+11%3A8%3A29.png) in [our documentation](http://documentation.lemonway.fr/api-en/directkit/overview/requests-and-responses)).
+To call the directkit**Json2** in PHP: use the [`curl_init`] to send a POST request (See also the [Postman example](https://documentation.lemonway.com/images/f1a2801937a01dfad047a9c626edcba1.png) in [our documentation](https://documentation.lemonway.com/en/directkit/overview/requests-and-responses/)).
 
 This tutorial show how simple it is.
 
@@ -87,12 +87,12 @@ Your commercial support will explain more in detail about the commission system.
 
 You can also try other functions to understand our API:
 
-- [Create a new wallet](http://documentation.lemonway.fr/api-en/directkit/manage-wallets/registerwallet-creating-a-new-wallet)
-- [Create a payment link to credit a wallet](http://documentation.lemonway.fr/api-en/directkit/money-in-credit-a-wallet/by-card/moneyinwebinit-indirect-mode-money-in-by-card-crediting-a-wallet)
-- [Create a payment form to credit a wallet](http://documentation.lemonway.fr/api-en/directkit/money-in-credit-a-wallet/payment-form)
-- [Register an IBAN to the wallet](http://documentation.lemonway.fr/api-en/directkit/money-out-debit-a-wallet-and-credit-a-bank-account/registeriban-link-an-iban-to-a-wallet)
-- [Transfer money from wallet to a bank account](http://documentation.lemonway.fr/api-en/directkit/money-out-debit-a-wallet-and-credit-a-bank-account/moneyout-external-fund-transfer-from-a-wallet-to-a-bank-account)
-- [Transfer money from wallet to other wallet](http://documentation.lemonway.fr/api-en/directkit/p2p-transfer-between-wallets/sendpayment-on-us-payment-between-wallets)
+- [Create a new wallet](https://documentation.lemonway.com/en/directkit/manage-wallets/registerwallet%253A-creating-a-new-wallet/)
+- [Create a payment link to credit a wallet](https://documentation.lemonway.com/en/directkit/money-in%253A-credit-a-wallet/by-card/moneyinwebinit%253A-indirect-mode-money-in-by-card-crediting-a-wallet/)
+- [Create a payment form to credit a wallet](https://documentation.lemonway.com/en/directkit/money-in%253A-credit-a-wallet/payment-form/)
+- [Register an IBAN to the wallet](https://documentation.lemonway.com/en/directkit/money-out%253A-debit-a-wallet-and-credit-a-bank-account/registeriban%253A-add-a-bank-account-(iban-format)-to-a-payment-account-for-money-outs/)
+- [Transfer money from wallet to a bank account](https://documentation.lemonway.com/en/directkit/money-out%253A-debit-a-wallet-and-credit-a-bank-account/moneyout%253A-external-fund-transfer-from-a-wallet-to-a-bank-account/)
+- [Transfer money from wallet to other wallet](https://documentation.lemonway.com/en/directkit/p2p%253A-transfer-between-wallets/sendpayment%253A-on-us-payment-between-wallets/)
 
 # Note
 
@@ -105,8 +105,8 @@ You can also try other functions to understand our API:
 [SoapClient]: https://github.com/lemonwaysas/php-client-directkit-xml-soap
 [SoapClient SDK]: https://github.com/lemonwaysas/php-client-directkit-xml-soap-sdk
 [LemonWay SDK]: https://github.com/lemonwaysas/php-client-directkit-xml
-[LemonWay API documentation]: http://documentation.lemonway.fr/
-[`MoneyInWebInit`]: http://documentation.lemonway.fr/api-en/directkit/money-in-credit-a-wallet/by-card/moneyinwebinit-indirect-mode-money-in-by-card-crediting-a-wallet
-[`GetWalletDetails`]: http://documentation.lemonway.fr/api-en/directkit/manage-wallets/getwalletdetails-getting-detailed-wallet-data
-[`RegisterWallet`]: http://documentation.lemonway.fr/api-en/directkit/manage-wallets/registerwallet-creating-a-new-wallet
-[test card]: http://documentation.lemonway.fr/api-en/introduction/test-environment-and-default-accounts
+[LemonWay API documentation]: http://documentation.lemonway.com/
+[`MoneyInWebInit`]: https://documentation.lemonway.com/en/directkit/money-in%253A-credit-a-wallet/by-card/moneyinwebinit%253A-indirect-mode-money-in-by-card-crediting-a-wallet/
+[`GetWalletDetails`]: https://documentation.lemonway.com/en/directkit/manage-wallets/getwalletdetails%253A-get-detailed-wallet-data/
+[`RegisterWallet`]: https://documentation.lemonway.com/en/directkit/manage-wallets/registerwallet%253A-creating-a-new-wallet/
+[test card]: https://documentation.lemonway.com/en/introduction/test-environment-and-default-accounts/
