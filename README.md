@@ -1,3 +1,5 @@
+⚠️WARNING: This client is deprecated⚠️ 
+
 The LemonWay API (called Directkit) has two implementations: Directkit**Json2** and Directkit**Xml**. 
 
 The Directkit**Json2** is recommended over the Directkit**Xml** because It is the simplest and the most network-efficient way.
